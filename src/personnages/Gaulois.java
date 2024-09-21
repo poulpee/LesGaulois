@@ -24,7 +24,7 @@ public class Gaulois {
 
 	public void frapper(Romain romain) {
 		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
-		romain.recevoirCoup(force/3);
+		romain.recevoirCoup((force/3)*effetPotion);
 	}
 
 	@Override
@@ -32,13 +32,25 @@ public class Gaulois {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 
+	public void boirePotion(int forcePotion) {
+		effetPotion = forcePotion;
+		parler("Merci Druide, je sens que ma force est " + String.valueOf(force)+" fois décuplée");
+	}
+	
+	
 	public static void main(String[] args) {
 		Gaulois asterix;
+		Romain minus;
 		asterix = new Gaulois("Astérix", 8);
+		minus = new Romain("Minus", 6);
 		System.out.println(asterix);
 		System.out.println(asterix.getNom());
-		asterix.parler("Bonjour ! ");
-		//asterix.frapper()
+		asterix.parler("Bonjour à tous ! ");
+		minus.parler("UN GAU... UN GAUGAU...");
+		asterix.frapper(minus);
+		asterix.frapper(minus);
+		asterix.frapper(minus);
+		asterix.boirePotion(3);
 	}
 
 }
