@@ -35,6 +35,7 @@ public class Village {
 		//Gaulois gaulois = village.trouverHabitant(30);
 		// puisque le gaulois n'est pas "relier" à son village
 		Chef abadourix = new Chef("Abadourix", 6, village);
+		village.chef = abadourix;
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		village.ajouterHabitant(asterix);
 		//Gaulois gaulois = village.trouverHabitant(1);
