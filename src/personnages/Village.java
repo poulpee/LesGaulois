@@ -13,6 +13,10 @@ public class Village {
 		villageois = new Gaulois[nbVillageoisMaximum];
 	}
 
+	public void setChef(Chef chef) {
+		this.chef = chef;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
@@ -35,7 +39,7 @@ public class Village {
 		//Gaulois gaulois = village.trouverHabitant(30);
 		// puisque le gaulois n'est pas "relier" à son village
 		Chef abadourix = new Chef("Abadourix", 6, village);
-		village.chef = abadourix;
+		village.setChef(abadourix);
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		village.ajouterHabitant(asterix);
 		//Gaulois gaulois = village.trouverHabitant(1);
