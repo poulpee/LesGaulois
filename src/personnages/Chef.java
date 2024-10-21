@@ -20,7 +20,7 @@ public class Chef {
 	}
 
 	private String prendreParole() {
-		return "Le chef " + nom + " du village " + village.getNom() + " : ";
+		return "Le chef " + nom + " : ";
 	}
 
 	public void frapper(Romain romain) {
